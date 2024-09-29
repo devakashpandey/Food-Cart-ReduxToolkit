@@ -12,7 +12,7 @@ const FoodCard = () => {
 
   const filteredFood = FoodData.filter((food) => {
     if (category === "All") {
-      return food.name.toLowerCase().includes(search);
+      return food.name.toLowerCase().includes(search.toLowerCase());
     } else {
       return (
         category === food.category && food.name.toLowerCase().includes(search)

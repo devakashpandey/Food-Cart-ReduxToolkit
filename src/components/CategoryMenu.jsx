@@ -30,8 +30,8 @@ const CategoryMenu = () => {
 
           <div className="flex items-center gap-5 text-[1rem]">
             <p
-              className={`px-5 py-1 rounded-md bg-slate-100  cursor-pointer hover:bg-green-500 hover:text-white transition-all duration-200 ${
-                selectedCategory === "All" && "bg-green-500 text-white"
+              className={`px-5 py-1 rounded-md bg-slate-100 text-black  cursor-pointer hover:bg-green-500 hover:text-white transition-all duration-200 ${
+                selectedCategory === "All" ? "bg-green-600 text-white" : ""
               }`}
               onClick={() => dispatch(setCategory("All"))}
             >
@@ -40,7 +40,7 @@ const CategoryMenu = () => {
             {categories.map((category, index) => (
               <p
                 className={`px-5 py-1 rounded-md bg-slate-100  cursor-pointer hover:bg-green-500 hover:text-white transition-all duration-200 ${
-                  selectedCategory === category && "bg-green-500 text-white"
+                  selectedCategory === category ? "bg-green-600 text-white" : ""
                 }`}
                 key={index}
                 onClick={() => dispatch(setCategory(category))}
